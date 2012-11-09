@@ -1,0 +1,629 @@
+/*
+	* Gridless version 2.0
+
+	* Credit is left inline and big thanks to Nicolas Gallagher and Jonathan Neal
+
+	* Across this document we use safe CSS hacks: http://mathiasbynens.be/notes/safe-css-hacks
+	* Selectors beggining with an underscore (_selector: property) target only IE6
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7
+*/
+/* HTML5 display definitions
+---------------------------------------- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+dialog {
+  display: block;
+}
+/* Corrects inline-block not defined in IE6/7/8 and FF3 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+/* Ensures content is hidden from all presentations, including screenreaders */
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+/* Base structure
+---------------------------------------- */
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
+html {
+  height: 100%;
+  font-size: 100%;
+  overflow-y: scroll;
+  /* Force a scrollbar in non-IE */
+
+  -webkit-text-size-adjust: 100%;
+  /* Prevent iOS text size adjust on orientation change without disabling user zoom */
+
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0 auto;
+  min-height: 100%;
+}
+/* Fonts settings based on the 100E2R standard: http://www.informationarchitects.jp/en/100e2r/ */
+body,
+button,
+input,
+select,
+textarea {
+  font: 1em/1.625 Georgia, serif;
+  color: #222;
+  /* Full black on white is too much contrast, #222 is a better default */
+
+}
+/* Add and/or remove tags as your baseline grid needs */
+p,
+blockquote,
+q,
+pre,
+address,
+hr,
+code,
+samp,
+dl,
+ol,
+ul,
+form,
+table,
+fieldset,
+menu,
+h4,
+h5,
+h6,
+img,
+figure,
+figcaption,
+button,
+hr {
+  margin: 0 0 1.625em;
+}
+/* Headings/small
+---------------------------------------- */
+/*
+	* Font sizes are based on the golden ratio of 16
+	* See this for the modular scale: ow.ly/5jGl6
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', FreeSerif, Georgia, serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+h1 {
+  font-size: 4.25em;
+  /* 68px */
+
+  line-height: 1.1471em;
+  margin: 0 0 0.3824em;
+}
+h2 {
+  font-size: 2.625em;
+  /* 42px */
+
+  line-height: 1.2381em;
+  margin: 0 0 0.619em;
+}
+h3 {
+  font-size: 1.625em;
+  /* 26px */
+
+  line-height: 1em;
+  margin: 0 0 1em;
+}
+small {
+  font-size: 0.625em;
+  /* 10px */
+
+  margin: 0 0 2.6em;
+}
+/* Preformatted text and code
+---------------------------------------- */
+/* Allows line wrapping of 'pre' */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre,
+code,
+kbd,
+samp {
+  font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
+}
+/* Tables
+---------------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+}
+tr,
+th,
+td {
+  padding-right: 1.625em;
+}
+/* Forms
+---------------------------------------- */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+legend {
+  border: 0;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7 */
+table button,
+table input {
+  *overflow: auto;
+}
+/* Quotes
+---------------------------------------- */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+blockquote,
+q,
+cite {
+  font-style: italic;
+}
+blockquote {
+  padding-left: 1.625em;
+  border-left: 1px solid #ddd;
+}
+blockquote > p {
+  padding: 0;
+}
+/* Lists
+---------------------------------------- */
+ul,
+ol {
+  list-style-position: inside;
+  padding: 0;
+}
+li ul,
+li ol {
+  margin: 0 1.625em;
+}
+dl dd {
+  margin-left: 1.625em;
+}
+/* Links
+---------------------------------------- */
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover,
+a:active {
+  outline: none;
+}
+/* Figures
+---------------------------------------- */
+figure {
+  margin: 0;
+}
+/* Embedded content
+---------------------------------------- */
+img,
+object,
+video {
+  max-width: 100%;
+  /* Automatically scales images larger than the container. Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
+
+  /* _width: 100%; /* IE6 doesn't support max-width, so we just use width. If the image is larger than the container, just uncomment this. If it is smaller than the container, uncomment and change the 100% value to an absolute one */
+
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
+
+}
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Abbreviations
+---------------------------------------- */
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+/* Marked/inserted/deleted text
+---------------------------------------- */
+mark {
+  background: #ff0;
+}
+ins {
+  text-decoration: none;
+  background: #ff9;
+}
+del {
+  text-decoration: line-through;
+}
+/* Others
+---------------------------------------- */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+strong,
+b,
+dt {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+var,
+address {
+  font-style: normal;
+}
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 0.625em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Helper classes
+---------------------------------------- */
+/*
+	* Micro clearfix hack, more semantically titled with 'group'
+	* Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+/* Primary styles
+---------------------------------------- */
+/* Media queries
+---------------------------------------- */
+/* The media queries included in here are only placeholder. Modify them as your content requires */
+@media only screen and (min-width: 480px) {
+  /* Wide mobile (480px+) styles go here */
+}
+@media only screen and (min-width: 768px) {
+  /* Tablets/netbooks (768px+) styles go here */
+}
+@media only screen and (min-width: 1024px) {
+  /* Desktops (1024px+) styles go here */
+}
+/* Print styles
+---------------------------------------- */
+/* Print styles inlined to avoid extra HTTP connection */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: sanbeiji.com/archives/953 */
+  
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /* Do not show javascript and internal links */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+.no-bullet {
+  list-style: none;
+}
+.relative {
+  position: relative;
+}
+.top0 {
+  margin-top: 0px;
+}
+.top05 {
+  margin-top: 05px;
+}
+.top10 {
+  margin-top: 10px;
+}
+.top15 {
+  margin-top: 15px;
+}
+.top20 {
+  margin-top: 20px;
+}
+.top30 {
+  margin-top: 30px;
+}
+.top40 {
+  margin-top: 40px;
+}
+.top50 {
+  margin-top: 50px;
+}
+.top60 {
+  margin-top: 60px;
+}
+.top70 {
+  margin-top: 70px;
+}
+.top80 {
+  margin-top: 80px;
+}
+.top90 {
+  margin-top: 90px;
+}
+.bottom0 {
+  margin-bottom: 0px;
+}
+.bottom05 {
+  margin-bottom: 05px;
+}
+.bottom10 {
+  margin-bottom: 10px;
+}
+.bottom15 {
+  margin-bottom: 15px;
+}
+.bottom20 {
+  margin-bottom: 20px;
+}
+.bottom30 {
+  margin-bottom: 30px;
+}
+.bottom40 {
+  margin-bottom: 40px;
+}
+.bottom50 {
+  margin-bottom: 50px;
+}
+.bottom60 {
+  margin-bottom: 60px;
+}
+.bottom70 {
+  margin-bottom: 70px;
+}
+.bottom80 {
+  margin-bottom: 80px;
+}
+.bottom90 {
+  margin-bottom: 90px;
+}
+.left0 {
+  margin-left: 0px;
+}
+.left05 {
+  margin-left: 05px;
+}
+.left10 {
+  margin-left: 10px;
+}
+.left15 {
+  margin-left: 15px;
+}
+.left20 {
+  margin-left: 20px;
+}
+.left30 {
+  margin-left: 30px;
+}
+.left40 {
+  margin-left: 40px;
+}
+.left50 {
+  margin-left: 50px;
+}
+.left60 {
+  margin-left: 60px;
+}
+.left70 {
+  margin-left: 70px;
+}
+.left80 {
+  margin-left: 80px;
+}
+.left90 {
+  margin-left: 90px;
+}
+.right0 {
+  margin-right: 0px;
+}
+.right05 {
+  margin-right: 05px;
+}
+.right10 {
+  margin-right: 10px;
+}
+.right15 {
+  margin-right: 15px;
+}
+.right20 {
+  margin-right: 20px;
+}
+.right30 {
+  margin-right: 30px;
+}
+.right40 {
+  margin-right: 40px;
+}
+.right50 {
+  margin-right: 50px;
+}
+.right60 {
+  margin-right: 60px;
+}
+.right70 {
+  margin-right: 70px;
+}
+.right80 {
+  margin-right: 80px;
+}
+.right90 {
+  margin-right: 90px;
+}
+.margin0 {
+  margin: 0;
+}
+.padding0 {
+  padding: 0;
+}
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+.tc {
+  text-align: center;
+}
+.tj {
+  text-align: justify;
+}
+hr.soften {
+  position: relative;
+  height: 1px;
+  margin: 40px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  border: 0;
+}
+hr.soften:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0));
+  height: 1px;
+  width: 100%;
+}

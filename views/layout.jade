@@ -1,0 +1,45 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=1024')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='author', content='Pierre Romera (@pirhoo)')
+    
+    title Digital Journalism Bootcamp - How to tell stories with data?
+    
+    link(href='//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic', rel='stylesheet')
+    link(href='/stylesheets/framework.css', rel='stylesheet')      
+    link(href='/stylesheets/style.css', rel='stylesheet')   
+
+  body.impress-not-supported
+
+    // For example this fallback message is only visible when there is `impress-not-supported` class on body.   
+    .fallback-message
+      p
+        | Your browser
+        b doesn't support the features required
+        | by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest
+        b Chrome
+        | ,
+        b Safari
+        | or
+        b Firefox
+        | browser.
+
+    #impress
+      block content
+                    
+    .hint
+      p Use a spacebar or arrow keys to navigate
+
+    script
+      if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+      }
+          
+    script(src='/javascripts/impress.js')
+    script
+      impress().init();

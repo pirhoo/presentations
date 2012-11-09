@@ -1,0 +1,147 @@
+@import "vendor/bootstrap/variables.less";
+@import "vendor/bootstrap/mixins.less";
+// I just need the grid system from bootsrap
+@import "vendor/bootstrap/grid.less"; 
+
+@textColor:#000;
+@linksColor:#941E38;
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    text-shadow:1px 1px 0 white;
+    color:@textColor;
+    
+    min-height: 740px;
+
+    background: url("http://jplusplus.org/images/bg.png");
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgba(240, 240, 240, 0)), to(rgba(0, 0, 0, 0.4))), url("http://jplusplus.org/images/bg.png");
+    background: -webkit-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("http://jplusplus.org/images/bg.png");
+    background:    -moz-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("http://jplusplus.org/images/bg.png");
+    background:      -o-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("http://jplusplus.org/images/bg.png");
+    background:         radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("http://jplusplus.org/images/bg.png");
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+a {
+    color: @linksColor;
+    text-decoration: none;
+    padding: 0 0.1em;
+    text-shadow: -1px -1px 2px rgba(250,250,250,0.9);
+
+    .transition(0.5s);
+
+    &:hover {
+        text-decoration:none;
+        border:0;
+    }
+}
+
+/* enable clicking on elements 'hiding' behind body in 3D */
+body     { pointer-events: none; }
+#impress { pointer-events: auto; }
+
+/* COMMON STEP STYLES */
+
+.step {
+    width: 990px;
+    padding: 10px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+
+    font-size: 30px;
+    line-height: 1.5;
+
+    & {
+        .transition(~"opacity 1s, color 1s, text-shadow 1s");
+    }
+
+    /* fade out inactive slides */
+    &:not(.active) {
+        opacity: 0.2;
+        color:transparent;
+        text-shadow:0 0 20px @textColor;
+
+        a {
+            color:transparent;
+            text-shadow:0 0 20px @linksColor;
+        }
+    }
+
+}
+
+
+.footnotes {
+    font-size:0.6em;
+    font-style:italic;
+    li {
+        white-space:nowrap;
+    }
+}
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 20px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    display:none;
+    
+    .translate(0,400px);
+    .transition(~"opacity 1s, -webkit-transform 0.5s 1s");
+}
+
+
+
+/* IMPRESS NOT SUPPORTED STYLES */
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    display: none;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    border: 1px solid #E4C652;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-disabled .step,
+.impress-not-supported .step {
+    position: relative;
+    opacity: 1;
+    margin: 20px auto;
+}
+
+.impress-not-supported .fallback-message {
+    display: block;
+}
+
