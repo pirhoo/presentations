@@ -478,6 +478,9 @@ sub {
 .top90 {
   margin-top: 90px;
 }
+.top100 {
+  margin-top: 100px;
+}
 .bottom0 {
   margin-bottom: 0px;
 }
@@ -513,6 +516,9 @@ sub {
 }
 .bottom90 {
   margin-bottom: 90px;
+}
+.bottom100 {
+  margin-bottom: 100px;
 }
 .left0 {
   margin-left: 0px;
@@ -550,6 +556,9 @@ sub {
 .left90 {
   margin-left: 90px;
 }
+.left100 {
+  margin-left: 100px;
+}
 .right0 {
   margin-right: 0px;
 }
@@ -585,6 +594,9 @@ sub {
 }
 .right90 {
   margin-right: 90px;
+}
+.right100 {
+  margin-right: 100px;
 }
 .margin0 {
   margin: 0;
