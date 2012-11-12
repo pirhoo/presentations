@@ -23,6 +23,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+p {
+    font-size:1.3em;
+    line-height:1.4em;
+}
+
 .thumbnail {
     background: white;
 }
@@ -49,6 +54,7 @@ body     { pointer-events: none; }
 /* COMMON STEP STYLES */
 
 .step {
+    z-index:10;
     width: 990px;
     padding: 10px;
 
@@ -69,6 +75,8 @@ body     { pointer-events: none; }
 
     /* fade out inactive slides */
     &:not(.active) {
+
+        z-index:9;
         opacity: 0.2;
         color:transparent;
         text-shadow:0 0 20px @textColor;

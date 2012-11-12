@@ -370,6 +370,10 @@ body {
   background: radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
   -webkit-font-smoothing: antialiased;
 }
+p {
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
 .thumbnail {
   background: white;
 }
@@ -396,6 +400,7 @@ body {
 }
 /* COMMON STEP STYLES */
 .step {
+  z-index: 10;
   width: 990px;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -416,6 +421,7 @@ body {
   transition: opacity 1s, color 1s, text-shadow 1s;
 }
 .step:not(.active) {
+  z-index: 9;
   opacity: 0.2;
   color: transparent;
   text-shadow: 0 0 20px #000000;
