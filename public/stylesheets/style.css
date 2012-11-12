@@ -464,15 +464,18 @@ body {
 }
 /* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
+  position: relative;
+  z-index: 100;
   font-family: sans-serif;
   line-height: 1.3;
-  display: none;
   width: 780px;
   padding: 10px 10px 0;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #E4C652;
   background: #EEDC94;
+  text-shadow: none;
+  display: none;
 }
 .fallback-message p {
   margin-bottom: 10px;
