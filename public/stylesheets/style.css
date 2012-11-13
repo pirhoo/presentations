@@ -489,3 +489,20 @@ body {
 .impress-not-supported .fallback-message {
   display: block;
 }
+footer {
+  padding: 10px 20px;
+  position: fixed;
+  z-index: 500;
+  text-align: right;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #555555;
+  font-weight: bold;
+  text-shadow: none;
+  background: white;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
+}

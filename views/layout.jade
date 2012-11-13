@@ -25,14 +25,16 @@ html(lang='en')
 
     #impress
       block content
-                    
-    .hint
-      p Use a spacebar or arrow keys to navigate
+                  
 
-    script
-      if ("ontouchstart" in document.documentElement) {
-        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-      }
+    footer
+      .row-fluid      
+        .span6.tl Use a spacebar or arrow keys to navigate.
+        .span6.tr          
+          a(href="https://twitter.com/share",class="twitter-share-button",data-via="Pirhoo",data-related="Pirhoo") Tweeter
+          a(href="https://twitter.com/Pirhoo",class="twitter-follow-button",data-show-count="false") Suivre @Pirhoo
+      script
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
           
     script(src='/javascripts/impress.js')
     script
