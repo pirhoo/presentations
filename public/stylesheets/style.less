@@ -48,7 +48,6 @@ a {
 }
 
 /* enable clicking on elements 'hiding' behind body in 3D */
-body     { pointer-events: none; }
 #impress { pointer-events: auto; }
 
 /* COMMON STEP STYLES */
@@ -162,7 +161,7 @@ body     { pointer-events: none; }
 
 footer {
     padding:10px 20px;
-    position:fixed;
+    position:absolute;
     z-index:500;
     text-align:right;
     top:0; 
@@ -171,7 +170,13 @@ footer {
     color:@gray;
     font-weight:bold;
     text-shadow:none;
+    .box-shadow(2px 0 20px 0 rgba(0,0,0,0.1) );
+
     background:white;
     background:fade(white, 30);
-    .box-shadow(2px 0 20px 0 rgba(0,0,0,0.1) );
+
+    a, iframe {
+        position:relative;
+        z-index:10000;
+    }
 }
