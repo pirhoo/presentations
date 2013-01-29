@@ -1,0 +1,38 @@
+extends ../layout
+
+block title
+  | Pierre Romera - Crowdsourcing
+
+block content
+
+  .step#title
+    h1 Le&nbsp;crowdsourcing
+    h3.bottom0 Hacks/Hackers 2013
+    p Pierre Romera - <a href="http://twitter.com/pirhoo">@pirhoo</a> - <a href="http://jplusplus.org">Journalism++</a> Paris
+
+
+  .step(data-x=0, data-y=-800, data-z=2000).tc
+    h1 Quoi ?
+    h3 L'intéligence collective<br />pour les nuls.
+
+  .step(data-x=-800, data-y=800, data-z=2000).tc
+    h1 Quand ?
+    h3 C'est l'histoire<br />d'un garçon et d'un loup.
+
+  .step(data-x=800, data-y=800, data-z=2000).tc
+    h1 Comment ?
+    h3 Des outils pour les journalistes</strong><br />comme pour les développeurs.  
+  
+  .step(data-x=0, data-y=0, data-z=4000).tc
+    h1.bottom0
+      img(src="/images/trap.gif", alt="It's a trap!").bottom0
+    h2 Évitez les pièges!
+
+  //.step(data-x=00, data-z=4001, data-rotate-y=180)
+    .row
+      .span6.tc
+        img(src="/images/warlogs.png", alt="Warlogs")
+        h3 ✗ Pas bien
+      .span6.tc
+        img(src="/images/prixdeleau.png", alt="Le Prix de l'Eau")
+        h3 ✔ Bien
