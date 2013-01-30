@@ -36,7 +36,25 @@ html(lang='en')
           a(href="https://twitter.com/Pirhoo",class="twitter-follow-button",data-show-count="false") Suivre @Pirhoo
 
     script
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");    
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
     script(src='/javascripts/impress.js')
     script
       impress().init();
+      
+      (function($) {
+
+        $(document).ready(function() {
+          var hostname = window.location.hostname.toLowerCase();   
+          $("a").each(function() {
+            var href = this.href.toLowerCase();
+            if (href.indexOf("http://") != -1 && href.indexOf(hostname) == -1) {
+              $(this).addClass('external').click(function(e) {
+                e.preventDefault();
+                window.open(href, '_blank');
+              });
+            }
+          });
+        });
+
+      })(jQuery);

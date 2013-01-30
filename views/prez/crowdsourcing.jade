@@ -13,7 +13,7 @@ block content
 
   .step(data-x=0, data-y=-800, data-z=2000).tc
     h1 Quoi ?
-    h3 L'intéligence collective<br />pour les nuls.
+    h3 L'intelligence collective<br />pour les nuls.
 
   .step(data-x=-800, data-y=800, data-z=2000).tc
     h1 Quand ?
@@ -21,18 +21,43 @@ block content
 
   .step(data-x=800, data-y=800, data-z=2000).tc
     h1 Comment ?
-    h3 Des outils pour les journalistes</strong><br />comme pour les développeurs.  
+    h3 Des outils pour les journalistes</strong><br />comme pour les développeurs.
+    p <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDQwdVJpckxqeHZZTVhoRG1NLWtPOFE6MQ#gid=0">À quand remonte votre<br />dernière escapade en banlieue ?</a>
+    p 
+      small <a href="https://drive.google.com/">Google Drive</a> &bullet; <a href="http://ushahidi.com">Ushahidi</a> &bullet; <a href="http://feowl.com">Feowl</a>    
   
-  .step(data-x=0, data-y=0, data-z=4000).tc
-    h1.bottom0
+  .step(data-x=0, data-z=4500).tc
+    h1.bottom0      
       img(src="/images/trap.gif", alt="It's a trap!").bottom0
     h2 Évitez les pièges!
 
-  //.step(data-x=00, data-z=4001, data-rotate-y=180)
+  .step(data-x=0, data-z=4000, data-rotate-y=180)
     .row
       .span6.tc
-        img(src="/images/warlogs.png", alt="Warlogs")
+        a(href="http://warlogs.owni.fr").thumbnail.bottom20
+          img(src="/images/warlogs.png", alt="Warlogs").bottom0
         h3 ✗ Pas bien
       .span6.tc
-        img(src="/images/prixdeleau.png", alt="Le Prix de l'Eau")
+        a(href="http://www.prixdeleau.fr/").thumbnail.bottom20
+          img(src="/images/prixdeleau.png", alt="Le Prix de l'Eau").bottom0
         h3 ✔ Bien
+
+  .step(data-y=350, data-z=4000, data-rotate-y=180)
+    .row
+      .span6
+        h3.tc.bottom20 Warlogs II
+        ul.unstyled.left20
+          li ☞ Participations trop complexes
+          li ☞ Public visé inexistant
+          li ☞ Rétribution obscure
+          li ☞ Ergonomie discutable    
+
+  .step(data-y=350, data-z=4000, data-rotate-y=180)
+    .row
+      .span6.offset6
+        h3.tc.bottom20 Le Prix de l'Eau
+        ul.unstyled.left30.tr
+          li Compréhenssion des objectifs ☜
+          li Soutien des lobbys ☜
+          li Participation citoyenne ☜
+          li Sujet fédérateur ☜

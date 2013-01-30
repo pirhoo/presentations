@@ -357,6 +357,14 @@ a.thumbnail:hover {
   padding: 9px;
   color: #555555;
 }
+ul.unstyled,
+ol.unstyled,
+ul.unstyled li,
+ol.unstyled li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 body {
   font-family: 'PT Sans', sans-serif;
   text-shadow: 1px 1px 0 white;
