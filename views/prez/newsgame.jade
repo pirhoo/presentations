@@ -1,0 +1,93 @@
+extends ../layout
+
+block title
+  | Pierre Romera - Data &amp; Newsgame
+
+block content
+
+    .step#title
+        h1.bottom0 Data <small>&amp;</small> Newsgame
+        p Pierre Romera - <a href="http://twitter.com/pirhoo">@pirhoo</a> - <a href="http://paris.jplusplus.org">Journalism++</a> Paris
+
+    - var x = y = 0
+    
+    .step(data-x=++x*800)
+        h2.tc Le problème avec les données
+        .row-fluid
+            .span6.tc
+                h3.bottom0 Elles sont<br />nombreuses
+                .tc ⬇
+                p 200 millions d'emails/minute
+
+            .span6.tc 
+                h3.bottom0 Elles sont<br />austères
+                .tc ⬇
+                p Des tableaur, des XML, des JSON, des octets, ... 
+
+    .step(data-x=++x*800)
+        h2.bottom0.tc Heureusement
+        p.tc les données sont maléables et <em>machine readable</em>.
+        h3.tc Nous pouvons les mettre en <big>mouvement</big>.
+
+    .step(data-x=++x*800)
+        h2.bottom0.tc Ce n'est hélas pas si facile
+        p.bottom10.tc de conjuguer <strong>intéraction</strong>, <strong>amusement</strong> et <strong>information</strong>.
+        hr.soften
+        .tc
+            a(href="http://app.owni.fr/despoticmind/index.php")
+                img.thumb.bottom0(src="/images/despoticmind.png", alt="Despotic Mind")
+
+    .step(data-x=x*800, data-rotate-y=180)
+        h2.tc L'information doit triompher !
+        p.tc Perdez ça de vue, et toutes<br />les données du mondes<br />ne vous serviront plus à rien.
+
+    .step(data-x=++x*800)
+        h2.tc.bottom10 Il y a un équilibre à trouver
+        p.tc 
+            | entre<br />
+            strong créer de l'amusement<br />
+            | et<br />
+            strong impliquer l'utilisateur.
+
+    .step(data-x=x*800, data-y=++y*600)
+        h2.tc.bottom0 Le crowdsourcing 
+        p.tc peut répondre à toutes ces contraintes.
+
+    .step(data-x=++x*800, data-y=y*600)
+        .tc
+            img.thumb(src="https://iampierremenard.files.wordpress.com/2012/01/dog-dude-wait-what.jpg")
+
+    .step(data-x=++x*800, data-y=y*600)
+        .tc
+            h2.tc.bottom10 Il s'agit donc d'enrober<br />la participation
+            p dans une <strong>démarche ludique</strong>.
+
+    .step(data-x=++x*800, data-y=y*600)
+        .tc
+            h3.bottom0 National Geographic :
+            h2 La tombe perdue de Gengis Khan
+            a(href="http://exploration.nationalgeographic.com/")
+                img.thumb(src="/images/nationalgeographic.png", width=400)
+
+
+    .step(data-x=x*800, data-y=y*600+150, data-rotate-y=180)
+        .tc 
+            p Ici, les phases<br />d'<big>apprentissage</big><br />et de <big>jeu</big> se succèdent 
+
+    .step(data-x=++x*800, data-y=y*600)
+        .tc
+            h3.bottom0 Google, Facebook &amp; Amazon
+            h2.bottom0 luttent contre le cancer
+            p dans une app mobile.
+            a(href="http://www.presse-citron.net/google-amazon-facebook-veulent-combattre-le-cancer-avec-un-jeu-pour-smartphone")
+                img.thumb(src="http://www.presse-citron.net/wordpress_prod/wp-content/uploads/cellslider.png", width=400)
+
+    .step(data-x=++x*800, data-y=y*600)
+        .tc
+            h3.bottom0 Zooniverse vous apprend à
+            h2.bottom0 explorer l'univers
+            p dans une série de <strong>jeux interactifs</strong>
+            a(href="https://www.zooniverse.org")
+                img.thumb(src="/images/zooniverse.png", width=400)
+
+
