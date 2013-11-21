@@ -1,0 +1,95 @@
+extends ../layout
+
+block title
+  | Pierre Romera - Data &amp; Newsgame
+
+block content
+
+    - var x = y = 0
+    .step(data-x=800*x++, data-y=800*y)#title
+        h2.bottom0 <small>When</small> Journalism <small>meets</small><br />Open Source <small>culture</small>
+        p Pierre Romera - <a href="http://twitter.com/pirhoo">@pirhoo</a> - <a href="http://paris.jplusplus.org">Journalism++</a> Paris
+
+    //- CHAPITRE I
+    .step(data-x=800*x, data-y=800*y++)
+        h2 I. Open Source, a culture?
+    .step(data-x=800*x, data-y=800*y++)
+        h3 It starts from licenses (GNU, GPL) but it's much much more
+        p Open Source is also about broadcast knowledge, transparency, sharing, ...
+        p For these reasons we refer more about Free Software, that focus on users freedom.
+    .step(data-x=800*x, data-y=800*y++)
+        h3 As any culture, Open Source gets its icons
+        ul
+            li Their own medium (GitHub, SourceForge, StackOverflow)
+            li Their own groups (Linux Distributions, programming styles, languages)
+            li Their own activists (WikiLeaks, Telecomix, EFF)
+        p Those figures and those groups define the mass movements that we find in every culture.
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Open Source has its own rules
+        p
+            | You all know the Free Software precepts...
+            | Some other rules also change the way we build software.
+        p
+            | By overloading our natural workflow, those allow us to work fluently.
+    .step(data-x=800*x, data-y=800*y++)
+        .row
+            .span3
+                .right20
+                    img(src="http://a51.idata.over-blog.com/4/06/66/31/250px-IndPorcupine.jpg")
+            .span9
+                h3 <abbr title="Open Source">OS</abbr> Software are like a group of porcupines
+                i (from the theory of human relationships by A. Schopenhauer)
+
+    //- CHAPITRE II
+    - ++x; y = 0
+    .step(data-x=800*x, data-y=800*y++)
+        h2 II. The identity crisis in journalism
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Journalism is in crisis <small>(no shit Sherlock)</small>
+        p
+            | But it goes further than economic issues:
+            strong &nbsp;the whole information chain has changed
+            | . Not only because journalists have now to survive...
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Information no longer goes from the top
+        p It does not come either from the bottom, <strong>information comes from every direction</strong>!
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Journalists have to upgrade themself
+        p New formats, new medium, new opportunities, new risks!
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Ploblem of this mutation
+        p There is a cohabitation between desir to modernize journlism and keep it in its traditional form
+    .step(data-x=800*x, data-y=800*y++)
+        p Journalists must accept to work with innotive tools and their actors.
+        h3 Hopefully, Internet actors stay attracted by the old-fashion media.
+        i Mozilla Foundation created <a href="http://source.opennews.org/">Source</a> to embed developper in Newsrooms.<br />
+        i Jeff Besos bought the Washington Post.
+
+    //- CHAPITRE III
+    - ++x; y = 0
+    .step(data-x=800*x, data-y=800*y++)
+        h2 III. The collision
+    .step(data-x=800*x, data-y=800*y++)
+        h3 One of its most common representation is <big>transparency</big>
+        p As for free software, OS Journalism must open their material.
+        p What WikiLeaks does since years is a perfect exemple.<br />The Guardian Datablog is also a great place to find data.
+    .step(data-x=800*x, data-y=800*y++)
+        h3 <big>Crowdsourcing</big> is directly inspired from the well known Wiki
+        p This pratice tries to involve users into a massive online investigation.
+        p Using open material, crowdsourcing could help digging into huge dataset or create ones.
+        i <a href="http://www.prixdeleau.fr/">Le Prix de l'Eau</a>, mars 2011
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Setup milestones, add features,<br />fork or accept pull requests
+        p This key words that we found in every Open Source projects could be apply to journalism.
+        i <a href="https://github.com/jplusplus/guide-du-datajournalisme">Guide du Journalisme de données</a>, sur Github.
+    .step(data-x=800*x, data-y=800*y++)
+        h3 We assist to an emergence of<br />Journalists Hackers
+        p They are journalists that have good knowledge in Computer Sciences and use technology to process data.
+        i <a href="http://owni.fr/2011/02/22/photo-de-kadhafi-a-paris-lelysee-a-menti/">Kadhafi pictures on the Elysée's website</a>, février 2011
+    .step(data-x=800*x, data-y=800*y++)
+        h3 Work effectively with Journalists
+        p <a href="http://datawrapper.de/">Datawrapper</a> is driven by journalists needs.
+        p
+    .step(data-x=800*x, data-y=800*y++)
+
+
