@@ -375,6 +375,12 @@ a.thumbnail:hover {
   background: white;
   display: inline;
 }
+.tc {
+  text-align: center !important;
+}
+.bg-white {
+  background: white;
+}
 ul.unstyled,
 ol.unstyled,
 ul.unstyled li,

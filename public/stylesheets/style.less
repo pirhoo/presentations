@@ -1,7 +1,7 @@
 @import "vendor/bootstrap/variables.less";
 @import "vendor/bootstrap/mixins.less";
-@import "vendor/bootstrap/grid.less"; 
-@import "vendor/bootstrap/thumbnails.less"; 
+@import "vendor/bootstrap/grid.less";
+@import "vendor/bootstrap/thumbnails.less";
 
 @textColor:#000;
 @linksColor:#941E38;
@@ -11,6 +11,13 @@
     display:inline;
 }
 
+.tc {
+    text-align: center !important;
+}
+
+.bg-white {
+    background: white;
+}
 
 ul, ol {
     &.unstyled, &.unstyled li {
@@ -30,7 +37,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     text-shadow:1px 1px 0 white;
     color:@textColor;
-    
+
     min-height: 740px;
 
     background: url("/images/bg.png");
@@ -68,7 +75,7 @@ a {
 }
 
 /* enable clicking on elements 'hiding' behind body in 3D */
-#impress { 
+#impress {
     pointer-events: auto;
 }
 
@@ -128,19 +135,19 @@ a {
     left: 0;
     right: 0;
     bottom: 200px;
-    
+
     background: rgba(0,0,0,0.5);
     color: #EEE;
     text-align: center;
-    
+
     font-size: 50px;
     padding: 20px;
-    
+
     z-index: 100;
-    
+
     opacity: 0;
     display:none;
-    
+
     .translate(0,400px);
     .transition(~"opacity 1s, -webkit-transform 0.5s 1s");
 }
@@ -154,7 +161,7 @@ a {
     z-index:100;
     font-family: sans-serif;
     line-height: 1.3;
-    
+
     width: 780px;
     padding: 10px 10px 0;
     margin: 20px auto;
@@ -186,7 +193,7 @@ footer {
     position:absolute;
     z-index:500;
     text-align:right;
-    top:0; 
+    top:0;
     left:0;
     right:0;
     color:@gray;
