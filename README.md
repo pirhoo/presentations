@@ -2,7 +2,8 @@
 
 ## Installation
 
-**Prerequisites: *node* & *npm* binairies on your system.**
+**Prerequisites: *node* & *npm* binairies on your system.** 
+
 From command line, install dependancies with NPM.
 
 ```
