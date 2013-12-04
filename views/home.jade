@@ -1,4 +1,8 @@
 extends ./layout
 
 block content
-  p 1
+  for prez, i in prezs
+    .step.tc(data-x=i*680)
+      a(href=prez)
+        img(src=getThumbnail(prez)).thumb
+

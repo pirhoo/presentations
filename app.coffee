@@ -5,6 +5,8 @@ express = require("express")
 http    = require("http")
 fs      = require("fs")
 path    = require("path")
+_       = require("underscore")
+config  = require("config")
 
 # Create the app
 app     = express()
@@ -20,16 +22,24 @@ app.configure ->
   app.use app.router
   app.use require("less-middleware")(src: __dirname + "/public")
   app.use express.static(path.join(__dirname, "public"))
+  # Custom local functions
+  app.locals
+    getThumbnail: (prez, w=680, h=480)->
+      key      = process.env.BROWSHOT_KEY or config.browshot_key
+      provider = "https://api.browshot.com/api/v1/simple"
+      cache    = 60*60*24*60 # 60 days cache
+      return "#{provider}?url=#{prez}&width=#{w}&height=#{h}&key=#{key}&cache=#{cache}"
 
 # Error handler in development mode
 app.configure "development", -> app.use express.errorHandler()
 
-
 # Homepage endpoint
 app.get "/", (req, res) ->
-  presentations = fs.readdirSync(path.join(__dirname, "views", "prez") )
+  host  = process.env.HOST or config.host
+  prezs = fs.readdirSync(path.join(__dirname, "views", "prez") )
+  prezs = _.map prezs, (p)-> host + "/" + p.split(".jade")[0]
   # Load the home
-  res.render "home", presentations: presentations
+  res.render "home", prezs: prezs
 
 # Presentation endpoint
 app.get "/:controller", (req, res) -> res.render "prez/" + req.params.controller

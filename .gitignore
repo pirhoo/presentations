@@ -3,3 +3,4 @@ dist
 .tmp
 .env
 *.log
+config/development.json
