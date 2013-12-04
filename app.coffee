@@ -24,6 +24,13 @@ app.configure ->
 # Error handler in development mode
 app.configure "development", -> app.use express.errorHandler()
 
+
+# Homepage endpoint
+app.get "/", (req, res) ->
+  presentations = fs.readdirSync(path.join(__dirname, "views", "prez") )
+  # Load the home
+  res.render "home", presentations: presentations
+
 # Presentation endpoint
 app.get "/:controller", (req, res) -> res.render "prez/" + req.params.controller
 
