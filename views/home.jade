@@ -2,7 +2,7 @@ extends ./layout
 
 block content
   for prez, i in prezs
-    .step.tc(data-x=i*680)
-      a(href=prez)
+    .step.tc(data-x=i*680, id="prez-" + prez)
+      a(href="/" + prez)
         img(src=getThumbnail(prez)).thumb
 

@@ -25,6 +25,8 @@ app.configure ->
   # Custom local functions
   app.locals
     getThumbnail: (prez, w=680, h=480)->
+      host     = process.env.HOST or config.host
+      prez     = host + "/" + prez
       key      = process.env.BROWSHOT_KEY or config.browshot_key
       provider = "https://api.browshot.com/api/v1/simple"
       cache    = 60*60*24*60 # 60 days cache
@@ -35,9 +37,8 @@ app.configure "development", -> app.use express.errorHandler()
 
 # Homepage endpoint
 app.get "/", (req, res) ->
-  host  = process.env.HOST or config.host
   prezs = fs.readdirSync(path.join(__dirname, "views", "prez") )
-  prezs = _.map prezs, (p)-> host + "/" + p.split(".jade")[0]
+  prezs = _.map prezs, (p)-> p.split(".jade")[0]
   # Load the home
   res.render "home", prezs: prezs
 
