@@ -400,11 +400,6 @@ body {
   color: #000000;
   min-height: 740px;
   background: url("/images/bg.png");
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgba(240, 240, 240, 0)), to(rgba(0, 0, 0, 0.4))), url("/images/bg.png");
-  background: -webkit-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-  background: -moz-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-  background: -o-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-  background: radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
   -webkit-font-smoothing: antialiased;
 }
 p {
@@ -456,13 +451,7 @@ a:hover {
 }
 .step:not(.active) {
   z-index: 9;
-  opacity: 0.2;
-  color: transparent;
-  text-shadow: 0 0 20px #000000;
-}
-.step:not(.active) a {
-  color: transparent;
-  text-shadow: 0 0 20px #941e38;
+  opacity: 0;
 }
 .footnotes {
   font-size: 0.6em;
@@ -525,23 +514,37 @@ a:hover {
 }
 footer {
   padding: 10px 20px;
+  padding-left: 80px;
   position: absolute;
   z-index: 500;
   text-align: right;
   top: 0;
   left: 0;
   right: 0;
-  color: #555555;
   font-weight: bold;
   text-shadow: none;
-  -webkit-box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.1);
-  background: white;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
 }
 footer a,
 footer iframe {
   position: relative;
   z-index: 10000;
+}
+footer .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 60px;
+}
+footer .logo img {
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  height: 80%;
 }

@@ -41,12 +41,6 @@ body {
     min-height: 740px;
 
     background: url("/images/bg.png");
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgba(240, 240, 240, 0)), to(rgba(0, 0, 0, 0.4))), url("/images/bg.png");
-    background: -webkit-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-    background:    -moz-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-    background:      -o-radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-    background:         radial-gradient(rgba(240, 240, 240, 0), rgba(0, 0, 0, 0.4)), url("/images/bg.png");
-
     -webkit-font-smoothing: antialiased;
 }
 
@@ -103,16 +97,8 @@ a {
 
     /* fade out inactive slides */
     &:not(.active) {
-
         z-index:9;
-        opacity: 0.2;
-        color:transparent;
-        text-shadow:0 0 20px @textColor;
-
-        a {
-            color:transparent;
-            text-shadow:0 0 20px @linksColor;
-        }
+        opacity:0;
     }
 
 }
@@ -190,22 +176,36 @@ a {
 
 footer {
     padding:10px 20px;
+    padding-left:80px;
     position:absolute;
     z-index:500;
     text-align:right;
     top:0;
     left:0;
     right:0;
-    color:@gray;
     font-weight:bold;
     text-shadow:none;
-    .box-shadow(2px 0 20px 0 rgba(0,0,0,0.1) );
-
-    background:white;
-    background:fade(white, 30);
+    background:fade(#fff, 40);
+    border-bottom:solid 1px fade(#fff, 80);
+    .box-shadow( 0 2px 2px -1px fade(#000, 10) );
 
     a, iframe {
         position:relative;
         z-index:10000;
+    }
+
+    .logo {
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        background:fade(#fff, 90);
+        width:60px;
+        img {
+            display: block;
+            margin:auto;
+            margin-top:10%;
+            height:80%;
+        }
     }
 }
