@@ -1,0 +1,121 @@
+extends ../layout
+
+block title
+    | Les nouvelles formes du journalisme - Pierre Romera
+
+block content
+
+    - var x = y = 0
+    - var dist = 1000
+    .step(data-y=y, data-y=dist*y++)
+        h2 Les&nbsp;nouvelles&nbsp;formes<br />du journalisme
+        p Mars 2014<br><small>Pierre Romera - <a href="http://twitter.com/pirhoo">@pirhoo</a> - <a href="http://paris.jplusplus.org">Journalism++</a> </small>
+
+    .step(data-y=y, data-y=dist*y, data-x=-200)
+        h3 Quelle est le lien entre ceci 
+        img.thumbnail(src="/images/northkorea.jpg")
+
+    .step.tr(data-y=y, data-y=dist*y++, data-x=200)
+        h3 Et cela ? 
+        img.thumbnail(src="/images/rusbridger.jpg")
+
+    .step(data-y=y, data-y=dist*y++)
+        h2 <big>Réponse</big><br />ce sont des journalistes&nbsp;!
+
+    .step(data-y=y, data-y=dist*y)
+        h3 Etre journaliste, aujourd'hui, c'est<br /><big><em>avoir accès à un réseau de distribution</em></big>
+
+    .step(data-y=y, data-y=dist*y++, data-rotate-y=-180)
+        h3 Cette définition n'est pas adaptée.
+
+    .step(data-y=y, data-y=dist*y++)
+        p.bottom0 Sur le web, les coûts de distribution sont nuls...
+        h3 Citoyens, entreprises et ONG<br />sont aussi des médias!
+
+    .step(data-y=y, data-y=dist*y++)
+        img.thumbnail.top60(src="/images/the-data-deluge.jpg", alt="Le Data Deluge !")
+
+    .step(data-y=y, data-y=dist*y++)
+        h3 Il faut repenser le concept même d'information.
+
+    .row.step(data-y=y, data-y=dist*y)
+        h3.span6.tr.top90 On peut raconter un évènement sous forme de texte
+        img.span6(src="/images/drones-article.png")
+
+    .step(data-y=y, data-y=dist*y++, data-rotate-y=-180)
+        h3.tc Mais aussi sous forme structurée
+        img.thumbnail(src="/images/drones-spreadsheet.png")
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.tc Avec les données, l'information peut être <big>agrégée</big>
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.tc L'information peut être<br /><big>analysée</big>
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.top60 Et <big>visualisée</big>
+        a.thumbnail(href="http://drones.pitchinteractive.com/")
+            img(src="/images/drones-app.png")
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.tc Quelques exemples.
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.top40 Homicide Watch
+        a.thumbnail(href="http://homicidewatch.org/")
+            img(src="/images/homicidewatch.png")
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.top40 Wikileaks PLUSD
+        a.thumbnail(href="http://search.wikileaks.org/plusd/graph#q=CHIRAC/")
+            img(src="/images/plusd.png")
+        //- Là tu peux dire que ça montre que les US avaient pas grand chose à carer de l'opposition française à la guerre en Irak
+
+    .step(data-y=y, data-y=dist*y++)
+        h3 The Migrants Files
+        img.thumbnail(src="/images/tmf.png")
+        //- Attention, on est sous embargo jusqu'au 31 mars, reste discret!
+
+    .step(data-y=y, data-y=dist*y++)
+        h3 Les compétences nécessaires évoluent...
+
+    .step(data-y=y, data-y=dist*y++)
+        p.bottom10 Collecter, nettoyer, analyser les données&nbsp;:
+        h3 Besoin de développeurs, statisticiens...<br />en plus des journalistes !
+
+    .step(data-y=y, data-y=dist*y)
+        p.bottom10 Le journaliste ne doit pas s'aliéner :
+        h3 Comme elle ne disent<br />nécéssairement la vérité, il faut<br /><big>interroger les données</big><br />comme n'importe quelle source
+
+    .step(data-y=y, data-y=dist*y++, data-rotate-y=-180)
+        .row
+            .span3.tc
+                h1 ?
+            .span9
+                p.bottom0 ◈ Qui les a collecté ?
+                p.bottom0 ◈ Dans quel but ? 
+                p ◈ Avec quel financement ?
+
+    .step(data-y=y, data-y=dist*y++)
+        h3 Les médias traditionnels s'y mettent
+            
+        h4.bottom0 Upshot (New-York Times)<br />
+        em "[...] a New York Times site dedicated to demystifying politics, economics and other subjects."
+        
+        h4.bottom0.top40 Zeit Online
+        em
+            a(href="http://datajournalismhandbook.org/1.0/en/in_the_newsroom_4.html") Data Journalism at the Zeit Online
+
+    .step(data-y=y, data-y=dist*y++)
+        h3.bottom0 En France, quelques ballons d'essais
+        p Parfois très prometteurs !
+
+    .step(data-y=y, data-y=dist*y++)
+        .tc
+            h3 Les Décodeurs
+            img.thumbnail(src="/images/decodeurs.png")
+
+    .step(data-y=y, data-y=dist*y++)
+        h2.tc Merci !
+        h3.tc
+            a(href="http://twitter.com/pirhoo") @pirhoo

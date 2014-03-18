@@ -381,6 +381,13 @@ a.thumbnail:hover {
 .bg-white {
   background: white;
 }
+big {
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 0 6px;
+  line-height: 120%;
+}
 ul.unstyled,
 ol.unstyled,
 ul.unstyled li,
@@ -408,6 +415,9 @@ p {
 }
 .thumbnail {
   background: white;
+}
+.tc .thumbnail {
+  margin: auto;
 }
 a {
   color: #941e38;
