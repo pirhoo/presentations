@@ -1,0 +1,18 @@
+#!/bin/bash
+HOST=http://presentations.pirhoo.com
+INSTANCE=$1
+TMP=$INSTANCE
+BUILD=build
+ZIP=$INSTANCE.zip
+# Extract the website
+wget -rkp $HOST/$INSTANCE -P $TMP --no-host-directories
+# Use index.html as filename
+mv  $TMP/$INSTANCE $TMP/index.html
+# Zip it to a new archive
+(cd $TMP && zip -r ../$ZIP *)
+# Remove the temporary dir
+rm -R $TMP
+# Create the extraction directory
+mkdir -p $BUILD
+# Move the zip to build dir
+mv $ZIP $BUILD

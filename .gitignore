@@ -4,3 +4,4 @@ dist
 .env
 *.log
 config/development.json
+build
