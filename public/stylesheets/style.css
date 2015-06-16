@@ -534,13 +534,10 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  font-weight: bold;
+  font-weight: 100;
   text-shadow: none;
-  background: rgba(255, 255, 255, 0.4);
-  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+  background: #FFF;
+  font-size: 0.9em;
 }
 footer a,
 footer iframe {
@@ -552,7 +549,7 @@ footer .logo {
   top: 0;
   left: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: #FFF;
   width: 60px;
 }
 footer .logo img {
