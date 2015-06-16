@@ -526,7 +526,9 @@ a:hover {
   display: block;
 }
 footer {
-  padding: 10px 20px;
+  padding: 0px 20px;
+  line-height: 50px;
+  height: 50px;
   padding-left: 80px;
   position: absolute;
   z-index: 500;
@@ -543,6 +545,8 @@ footer a,
 footer iframe {
   position: relative;
   z-index: 10000;
+  margin-left: 10px;
+  display: inline-block;
 }
 footer .logo {
   position: absolute;
