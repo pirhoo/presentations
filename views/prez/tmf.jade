@@ -25,7 +25,7 @@ block content
     .step(data-y=1000*y, data-x=1000*x++)
         h3 Le problème
         ul
-            li Les migrants meurent à nos frontière
+            li Les migrants meurent à nos frontières
             li On se souvient surtout des évènements marquants
             li En l'absence de données, impossible d'avoir une vue d'ensemble
             li Les sources de données existent mais elles sont éparses
@@ -75,8 +75,22 @@ block content
         ul
             li De migrants
             li D'événements
+            li Des centres de détention
+            li Des territoires
 
-    .step(data-y=1000*y, data-x=1000*x++, data-z=1000*2)
+    .step(data-y=1000*y, data-x=1000*x, data-z=1000*2)
+        h3.bottom10 Structurer
+        p.bottom0 Des migrants.
+        iframe.thumbnail(frameborder=0, height="450", width="100%", src="//www.detective.io/embed/detective/the-migrants-files/migrant/69737/")
+
+    .step(data-y=1000*y, data-x=1000*x, data-z=1000*3)
+        h3.bottom10 Structurer
+        p.bottom0 Tous les champs doivent pouvoir être sourcés.
+        a(href="https://www.detective.io/detective/the-migrants-files/event/69733/", target="_blank")
+            img.thumbnail(src="http://i.imgur.com/nEGrxYZ.png")
+
+
+    .step(data-y=1000*y, data-x=1000*x++, data-z=1000*4)
         h3 Structuer
         blockquote Les données de United ne sont pas atomiques
         p Pour répertorier chaque migrant il faut <em>éclater</em> les lignes de cette base de données.
@@ -84,12 +98,12 @@ block content
     .step(data-y=1000*y, data-x=1000*x++)
         h3 Fusionner
         p C'est très simple, il suffit de mettre les bases bout à bout.
-        p <strong>Problème</strong> :<br />certain éléments sont présents dans les deux bases.
+        p <strong>Problème</strong> : certain éléments sont présents dans les deux bases.
 
     .step(data-y=1000*y, data-x=1000*x)
         h3 Dé-dupliquer
         p On serait tenté de vouloir automatiser cette opération.
-        p <strong>Problème</strong> :<br />la variété des taxonomies et des approximations rend cette automatisation impossible.
+        p <strong>Problème</strong> : la variété des taxonomies et des approximations rend cette automatisation impossible.
 
     .step(data-y=1000*y, data-x=1000*x++, data-z=1000*1)
         h3 Dé-dupliquer
